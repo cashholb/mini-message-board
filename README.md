@@ -11,6 +11,6 @@ Live Demo: [threadit.fly.dev](https://threadit.fly.dev/)
 - EJS for view templates
 - Node.js
 - Express.js for network requests and routing
-- Mongoose to translate interact with the database
-- MongoDB as the Database
+- Mongoose to interact with the database
+- MongoDB
 - hosted by fly.io
