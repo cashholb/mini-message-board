@@ -6,6 +6,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <a href="/new">what's on your mind?</a>
+    <ul>
+      <% messages.forEach(message => {
+        %>
+          <li>User: <%= message.user %></li>
+          <li>Says: <%= message.message %></li>
+          <li>At: <%= message.date %></li>
+          <br>
+        <%
+      }) %>
+    </ul>
   </body>
 </html>

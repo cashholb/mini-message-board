@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Post a message!</h1>
+    <form method="POST" action="/new">
+      <input type="text" id="username" name="username" placeholder="enter a username" required minlength="3" maxlength="16">
+      <input type="text" id="message" name="message" placeholder="type a message here" required minlength="3" maxlength="150">
+      <input type="submit" value="post" />
+    </form>
+    <button><a href="/">Cancel</a></button>
+  </body>
+</html>
