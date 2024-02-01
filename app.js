@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config()
+console.log(process.env) // remove this after you've confirmed it is working
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,7 +14,7 @@ var app = express();
 // Set up mongoose connection
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = 'mongodb+srv://cashtonholbert:LRw7H2hfMlXM19BD@messagescluster.dxrne6a.mongodb.net/mini-message-DB?retryWrites=true&w=majority';
+const mongoDB = process.env.MONGO_CONNECTION_STRING;
 
 
 main().catch((err) => console.log(err));
